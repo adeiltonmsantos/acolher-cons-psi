@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'BetterTogether'; /* Dê um nome de sua escolha para a fonte */
+    src: url('../fonts/Better\ Together\ Script.woff2') format('woff2');
+         /* url('../fonts/better-together.woff') format('woff'); */
+    /* Adicione outros formatos se necessário para navegadores muito antigos */
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -199,7 +208,12 @@ nav ul li:hover{
 
 /* Section Home */
 .home-img{
-    background-image: url('../img/psychologist-group01.png');
+    background-image: url('../img/acolher-professionals.png');
+    background-size: 115%;
+    background-repeat: no-repeat;
+    background-position: 14% 76%;
+    width: 28rem;
+    height: 28rem;
 }
 
 .home-content{
@@ -210,20 +224,22 @@ nav ul li:hover{
 }
 
 .home-content h1{
-    font-size: 4rem;
+    font-family: 'BetterTogether';
+    font-weight: normal;
+    font-size: 9rem;
     width: 19.1rem;
-    line-height: 3.8rem;
+    line-height: 6.8rem;
 }
 
 .home-content p{
-    font-size: 1.8rem;
-    line-height: 2.5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
     text-align: justify;
 }
 
 .home-content ul li{
     list-style: none;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 /* H1 styles of some sections */
