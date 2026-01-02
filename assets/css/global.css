@@ -49,11 +49,15 @@ body{
     gap: 2.5rem;
 }
 
+.main-container h1{
+    font-size: 2.8rem;
+}
+
 /* Common styles of every section containers */
 section{
     min-height: 100dvh;
     display: flex;
-    padding-top: calc(var(--header-height) + 5rem);
+    padding-top: calc(var(--header-height) + 3rem);
     padding-bottom: 1rem;
     flex-direction: column;
     justify-content: flex-start;
@@ -251,8 +255,8 @@ nav ul li:hover{
 }
 
 .about-us-img{
-    width: 30.8rem;
-    height: 30.8rem;
+    width: 26rem;
+    height: 26rem;
     border: 0.8rem solid var(--dark-border);
     border-radius: 50%;
 }
@@ -275,8 +279,8 @@ nav ul li:hover{
     gap: 2.5rem;
     width: 30.8rem;
     background-color: var(--medium-tone);
-    padding: 1rem;
-    box-sizing: content-box;
+    padding: 2rem 1rem 1rem;
+    /* box-sizing: content-box; */
     border-radius: 2rem;
 }
 
@@ -284,14 +288,20 @@ nav ul li:hover{
     display: flex;
     overflow: hidden;
     width: 100%;
+    min-width: 30.8rem;
 }
 
 .slide-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
+    min-width: 30.8rem;
     animation: slider-auto 40s infinite ease-in-out;
+}
+
+.slide-content p{
+    padding: 1.5rem;
 }
 
 /* Animation definitions */
@@ -335,85 +345,93 @@ nav ul li:hover{
 
 /* Skills section */
 #skills{
-    display: flex;
-    justify-content: center;
-    margin: auto auto;
-}
-
-#skills .main-container{
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:
-        "title title"
-        "fig1 fig2"
-        "fig3 fig4"
-        "text-list text-list"
-    ;
-    row-gap: 2rem;
-    height: 60rem;
+    background-color: var(--dark-tone);
 }
 
 #skills .main-container h1{
-    grid-area: title;
-    justify-self: center;
+    color: var(--lightness-tone)
 }
 
-#skills-img-01{
-    grid-area: fig1;
-    background-image: url('../img/people01.png');
-    width: 14rem;
-    height: 14rem;
+.skills-grid-img{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 29.5rem;
+    position: relative;
 }
 
-#skills-img-02{
-    grid-area: fig2;
-    background-image: url('../img/people02.png');
-    width: 14rem;
-    height: 14rem;
+.feeling-img{
+    width: 9.7rem;
+    height: 9.7rem;
+    border: 0.4rem solid var(--light-border);
+    border-radius: 50%;
 }
 
-#skills-img-03{
-    grid-area: fig3;
-    background-image: url('../img/people03.png');
-    width: 14rem;
-    height: 14rem;
+.professionals-skills-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#skills-img-04{
-    grid-area: fig4;
-    background-image: url('../img/people04.png');
-    width: 14rem;
-    height: 14rem;
+.skills-professionals-img{
+    width: 20.9rem;
+    height: 20.9rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 0.4rem solid var(--light-border);
+    border-radius: 50%;
 }
 
-#skills-img-01,
-#skills-img-02,
-#skills-img-03,
-#skills-img-04{
-    border-width: 0.6rem;
-    background-size: 100%;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+.skills-grid-img .feeling-img:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
-#skills-img-01:hover,
-#skills-img-02:hover,
-#skills-img-03:hover,
-#skills-img-04:hover{
-    transform: scale(1.1);
+.skills-grid-img .feeling-img:nth-child(2){
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 
-.skills-list{
-    grid-area: text-list;
-    margin-left: 2rem;
+.skills-grid-img .feeling-img:nth-child(3){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
-.skills-list li{
-    font-size: 1.8rem;
+.skills-grid-img .feeling-img:nth-child(4){
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.skill-description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem;
+    width: 30.4rem;
+    padding: 2.5rem 1.8rem;
+    background-color: var(--light-tone);
+    border-radius: 2.5rem;
+}
+
+.skill-description-container h2{
+    font-size: 2.2rem;
     line-height: 2.2rem;
+}
+
+.skill-description-container p{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    text-align: justify;
 }
 
 /* Key Differentiators section */
@@ -458,10 +476,6 @@ nav ul li:hover{
 #contact .main-container{
     height: 40rem;
     gap: 2rem;
-}
-
-#contact .main-container h1{
-    padding-bottom: 1rem;
 }
 
 .contact-container{
@@ -527,20 +541,20 @@ nav ul li:hover{
         gap: 3.5rem;
     }
 
-    #about-us-title{
-        font-size: 2.8rem;
-        line-height: 2.8rem;
+    .slider{
+        gap: 1.5rem;
     }
 
-    .slider, .slide-content{
-        width: 25rem;
+    .slider, .slider-container, .slide-content{
+        width: 28rem;
+        min-width: 28rem;
     }
 
     .slide-content{
         display: flex;
         flex-direction: column;
         width: 25rem;
-        min-width: 25rem;
+        min-width: 28rem;
         gap: 1.5rem;
     }
 
@@ -556,8 +570,8 @@ nav ul li:hover{
     }
 
     .about-us-img{
-        width: 22rem;
-        height: 22rem;
+        width: 20rem;
+        height: 20rem;
     }
 
 }
