@@ -10,6 +10,7 @@ a{
 }
 
 :root{
+    /* Standard dimensions */
     --header-height: 13.6rem;
     
     /* Main colors */
@@ -39,7 +40,15 @@ body{
     display: none !important;
 }
 
-/* Common height of every section containers */
+/* Common container for every section */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* Common styles of every section containers */
 section{
     min-height: 100dvh;
     display: flex;
@@ -53,9 +62,17 @@ section{
 }
 
 /* Home section */
-
 #home{
     background-color: var(--light-tone)
+}
+
+#home .main-container{
+    gap: 6.5rem;
+}
+
+.home-tit-container{
+    display: flex;
+    flex-direction: column;
 }
 
 .home-tit-container img{
@@ -69,26 +86,35 @@ section{
     line-height: 2rem;
 }
 
-/* Common styles of img div's */
-.home-img,
-#about-us .about-us-img,
-#skills-img-01,
-#skills-img-02,
-#skills-img-03,
-#skills-img-04,
-.contact-container
-{
+.home-img{
+    background-image: url('../img/professionals.png');
+    background-size: 104%;
+    background-repeat: no-repeat;
+    background-position: 14% 76%;
+    width: 30.8rem;
+    height: 30.8rem;
     border: 0.8rem solid var(--dark-border);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 50%;
-    width: 28rem;
-    height: 28rem;
-    background-size: 137%;
-    background-position: 56% 10%;
-    background-origin: content-box;
 }
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.home-content ul li{
+    list-style: none;
+    font-size: 1.4rem;
+}
+
 
 /* Common styles for Header, Footer, nav */
 header, footer{
@@ -120,7 +146,7 @@ header{
 }
 
 .logo-header img{
-    height: 8rem;
+    height: 6.28rem;
 }
 
 .logo-header p{
@@ -215,68 +241,92 @@ nav ul li:hover{
     background-color: #1D3358;
 }
 
-
-/* Common container for every section */
-.section-main-container{
+/* About-us section */
+#about-us{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3.5rem;
+    gap: 2.5rem;
 }
 
-/* Section Home */
-.home-img{
-    background-image: url('../img/acolher-professionals.png');
-    background-size: 115%;
-    background-repeat: no-repeat;
-    background-position: 14% 76%;
-    width: 28rem;
-    height: 28rem;
-}
-
-.home-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.home-content h1{
-    font-family: 'BetterTogether';
-    font-weight: normal;
-    font-size: 9rem;
-    width: 19.1rem;
-    line-height: 6.8rem;
-}
-
-.home-content p{
-    font-size: 1.6rem;
-    line-height: 2rem;
-    text-align: justify;
-}
-
-.home-content ul li{
-    list-style: none;
-    font-size: 1.4rem;
-}
-
-/* H1 styles of some sections */
-#about-us .section-main-container h1,
-#skills .section-main-container h1,
-#key-differentiators .section-main-container h1
-{
-    font-size: 2.8rem;
-}
-
-/* About-us section */
 .about-us-img{
-    background-image: url('../img/clinic01.png');
+    background-image: url('../img/professionals.png');
+    background-size: 300%;
+    background-repeat: no-repeat;
+    width: 30.8rem;
+    height: 30.8rem;
+    border: 0.8rem solid var(--dark-border);
+    border-radius: 50%;
 }
 
-#about-us .section-main-container p{
+.about-us h2{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+#about-us .main-container p{
     font-size: 1.8rem;
     line-height: 2.0rem;
     text-align: justify;
+}
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 30.8rem;
+}
+
+.slider-container{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+#about-us-eronilde{
+    background-position: 38% 40%;
+}
+
+#about-us-tania{
+    background-position: 106% 58%;
+}
+
+#about-us-david{
+    background-position: 77% 32%;
+}
+
+#about-us-felipe{
+    background-position: 0% 33%;
+    background-size: 330%;
+}
+
+.slider-controls{
+    display: flex;
+    border: 0.2rem solid var(--dark-border);
+    border-radius: 1.8rem;
+    width: 11rem;
+    height: 3.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.slider-controls img{
+    width: 1.9rem;
+    height: 1.6rem;
+    cursor: pointer;
+}
+
+.slider-controls img:nth-child(2){
+    transform: rotate(180deg);
 }
 
 /* Skills section */
@@ -286,7 +336,7 @@ nav ul li:hover{
     margin: auto auto;
 }
 
-#skills .section-main-container{
+#skills .main-container{
     display: grid;
     justify-content: center;
     justify-items: center;
@@ -302,7 +352,7 @@ nav ul li:hover{
     height: 60rem;
 }
 
-#skills .section-main-container h1{
+#skills .main-container h1{
     grid-area: title;
     justify-self: center;
 }
@@ -401,12 +451,12 @@ nav ul li:hover{
     padding: 2rem;
 }
 
-#contact .section-main-container{
+#contact .main-container{
     height: 40rem;
     gap: 2rem;
 }
 
-#contact .section-main-container h1{
+#contact .main-container h1{
     padding-bottom: 1rem;
 }
 
@@ -463,257 +513,7 @@ nav ul li:hover{
     
 }
 
-@media screen and (min-width: 768px){
-    /* Home section */
-    /* #home .section-main-container{
-        margin-top: 12rem;
-    } */
+/* Desktops */
+@media screen and (min-width: 1280px){
 
-    .home-img,
-    .about-us-img{
-        width: 35rem;
-        height: 35rem;
-    }
-
-    /* Skills section */
-    #skills-img-01,
-    #skills-img-02,
-    #skills-img-03,
-    #skills-img-04{
-        width: 21.5rem;
-        height: 21.5rem;
-    }
-
-    /* Key Differentiators section */
-    .key-differentiators-content{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        row-gap: 2rem;
-    }
-
-    .key-differentiator:nth-child(1){
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .key-differentiator:nth-child(2){
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    .key-differentiator:nth-child(3){
-        grid-column-start: 3;
-        grid-column-end: 5;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    /* Contact section */
-    #contact .section-main-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 5rem;
-        height: 35rem;
-    }
-
-    #contact .section-main-container h1{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        font-size: 2.8rem;
-    }
-
-    #contact .section-main-container .contact-container:nth-child(2){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    #contact .section-main-container .contact-container:nth-child(3){
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-}
-
-@media screen and (min-width: 1080px){
-    nav{
-        display: block;
-    }
-
-    .mobile-menu-icon{
-        display: none;
-    }
-
-    #home .section-main-container{
-        flex-direction: row;
-    }
-
-    /* Home section */
-    .home-img{
-        width: 44rem;
-        height: 44rem;
-    }
-
-    .home-content{
-        width: 50rem;
-    }
-
-    .home-content h1{
-        font-size: 8.5rem;
-        line-height: 7.6rem;
-    }
-
-    .home-content p{
-        font-size: 2.8rem;
-        line-height: 3.4rem;
-    }
-
-    .home-content ul li{
-        font-size: 2rem;
-    }
-
-    /* About-us section */
-    #about-us{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #about-us .section-main-container{
-        max-width: 110rem;
-        max-height: 41rem;
-        display: grid;
-        row-gap: 4rem;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-            "title fig"
-            "p1 fig"
-            "p2 fig"
-            ;
-        #about-us-title{
-            grid-area: title;
-        }
-    
-        .about-us-img{
-            grid-area: fig;
-            justify-self: flex-end;
-        }
-
-        #about-us-p1{
-            grid-area: p1
-        }
-
-        #about-us-p2{
-            grid-area: p2
-        }
-
-        #about-us-p1, #about-us-p2{
-            line-height: 3.4rem;
-        }
-    }
-
-    /* Skills section */
-    #skills .section-main-container{
-        /* padding-top: 12rem; */
-        grid-template-columns: 3fr 1fr 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        width: 100rem;
-        height: 45rem;
-        align-items: flex-start;
-        row-gap: 2rem;
-        column-gap: 4rem;
-    }
-
-    #skills .section-main-container h1{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        justify-self: flex-start;
-        font-size: 2.8rem;
-    }
-
-    .skills-list{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 5;
-        justify-self: flex-start;
-    }
-    
-    .skills-list li{
-        font-size: 2rem;
-        line-height: 3.4rem;
-    }
-
-    #skills-img-01{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 4;
-    }
-
-    #skills-img-02{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 4;
-    }
-
-    #skills-img-03{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 7;
-    }
-
-    #skills-img-04{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 7;
-    }
-
-    /* Key differentiators section */
-    .key-differentiators-content{
-        max-width: 90rem;
-    }
-
-    /* Contact section */
-    #contact{
-        display: flex;
-        justify-content: center;
-    }
-
-    #contact .section-main-container{
-        width: 76rem;
-        column-gap: 14rem;
-    }
-}
-
-@media screen and (min-width: 1200px){
-    nav{
-        width: 92.6rem;
-    }
-
-    #home .section-main-container{
-        justify-content: space-between;
-        gap: 11.4rem;
-        /* padding-top: 5rem; */
-    }
-
-    /* Skills section */
-    #skills .section-main-container{
-        width: auto;
-        max-width: 100rem;
-    }
 }
