@@ -47,6 +47,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
+    max-width: 900px;
 }
 
 .main-container h1{
@@ -311,11 +312,9 @@ nav ul li:hover{
 
 .slider-container{
     display: flex;
-    /* overflow: hidden; */
     width: 100%;
     min-width: 30.8rem;
     position: relative;
-    /* transition: transform 1.5s ease-in-out; */
 }
 
 .slide{
@@ -324,6 +323,14 @@ nav ul li:hover{
     align-items: center;
     gap: 2rem;
     min-width: 30.8rem;
+}
+
+.about-us-professional{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide p{
@@ -597,14 +604,25 @@ nav ul li:hover{
     }
 }
 
-/* Larger tablets */
+/* Medium tablets */
 @media screen and (min-width: 768px){
+    section {
+        padding-top: calc(var(--header-height) + 5rem);
+    }
+    
     .main-container h1{
         font-size: 3.5rem;
     }
 
     .main-container h2{
         font-size: 2.8rem;
+    }
+
+    /* About-us section */
+    .about-us-img{
+        width: 33rem;
+        height: 33rem;
+        border: 0.8rem solid var(--dark-border);
     }
 
     .slider{
@@ -627,10 +645,173 @@ nav ul li:hover{
         padding: 1.5rem;
     }
 
+    #about-us .main-container p{
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+    }
+
 }
 
+/* Larger tablets */
+@media screen and (min-width: 900px){
+    section {
+        padding-top: calc(var(--header-height) + 8rem);
+    }
+    
+    .main-container{
+        gap: 4rem;
+    }
 
-/* Desktops */
+    .main-container h1{
+        font-size: 4rem;
+    }
+
+    .main-container h2{
+        font-size: 3.2rem;
+    }
+
+    /* Home section */
+    .home-img{
+        width: 45rem;
+        height: 45rem;
+    }
+    
+    .home-tit-container img{
+        width: 40rem;
+        height: 15rem;
+    }
+
+    .home-content .home-tit-container p{
+        font-size: 3rem;
+    }
+
+    .home-content p{
+        font-size: 2.3rem;
+    }
+
+    .home-content ul li{
+        font-size: 2.3rem;
+    }
+
+    .slider{
+        width: 50rem;
+        padding: 2rem 1rem 1rem;
+        border: 0.4rem solid var(--lightness-tone);
+        border-radius: 2rem;
+        padding: 4rem;
+    }
+
+    .slider-container{
+        width: 100%;
+        min-width: 50rem;
+    }
+
+    .slide{
+        min-width: 50rem;
+        padding: 2rem;
+    }
+
+    #about-us .main-container p{
+        font-size: 2.6rem;
+        line-height: 2.8rem;
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    /* Skills section */
+    #skills{
+        padding-bottom: 5rem;
+    }
+
+    .skills-grid-img {
+        width: 38rem;
+        height: 35rem;
+    }
+    .skills-professionals-img{
+        width: 28rem;
+        height: 28rem;
+    }
+
+    .feeling-img{
+        width: 11rem;
+        height: 11rem;
+        border: 0.4rem solid var(--light-border);
+        border-radius: 50%;
+    }
+
+    .skill-description-container{
+        width: 40rem;;
+    }
+
+    .skill-description p{
+        font-size: 2rem;
+        line-height: 2.2rem;
+        text-align: justify;
+    }
+
+    /* Contact section */
+    .main-contact-container{
+        display: grid;
+        gap: 1rem 2rem;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* Desktops and larger screen*/
 @media screen and (min-width: 1280px){
+    .main-container h1{
+        font-size: 3rem;
+    }
+
+    .main-container h2{
+        font-size: 2.7rem;
+    }
+
+    /* Home section */
+    #home .main-container{
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem
+    }
+
+    /* About-us section */
+    .slider{
+        width: 80rem;
+        padding: 2rem 1rem 1rem;
+        border: 0.4rem solid var(--lightness-tone);
+        border-radius: 2rem;
+    }
+
+    .slider-container{
+        width: 100%;
+        min-width: 80rem;
+        height: 32rem;
+    }
+
+    .slide{
+        min-width: 80rem;
+        flex-direction: row;
+    }
+
+/* About-us section */
+    #about-us{
+        padding-top: calc(var(--header-height) + 4rem);
+    }
+
+    #about-us .main-container p {
+        font-size: 2.2rem;
+        line-height: 2.9rem;
+    }
+
+    .about-us-img{
+        width: 28rem;
+        height: 28rem;
+    }
+
+    .slide p{
+        padding: 1.5rem;
+    }
 
 }
