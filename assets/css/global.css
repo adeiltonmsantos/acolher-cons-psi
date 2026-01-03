@@ -85,7 +85,7 @@ section{
     height: 7.8rem;
 }
 
-.home-tit-container div{
+.home-tit-container p{
     font-size: 1.35rem;
     font-weight: bold;
     line-height: 2rem;
@@ -573,8 +573,62 @@ nav ul li:hover{
 
 /* Tablets */
 @media screen and (min-width: 600px){
+    /* Home section */
+    .home-img{
+        width: 35rem;
+        height: 35rem;
+    }
     
+    .home-tit-container img{
+        width: 30rem;
+        height: 11.25rem;
+    }
+
+    .home-tit-container p{
+        font-size: 2rem;
+    }
+
+    .home-content p{
+        font-size: 2rem;
+    }
+
+    .home-content ul li{
+        font-size: 2rem;
+    }
 }
+
+/* Larger tablets */
+@media screen and (min-width: 768px){
+    .main-container h1{
+        font-size: 3.5rem;
+    }
+
+    .main-container h2{
+        font-size: 2.8rem;
+    }
+
+    .slider{
+        width: 40rem;
+        padding: 2rem 1rem 1rem;
+        border: 0.4rem solid var(--lightness-tone);
+        border-radius: 2rem;
+    }
+
+    .slider-container{
+        width: 100%;
+        min-width: 40rem;
+    }
+
+    .slide{
+        min-width: 40rem;
+    }
+
+    .slide p{
+        padding: 1.5rem;
+    }
+
+}
+
 
 /* Desktops */
 @media screen and (min-width: 1280px){
