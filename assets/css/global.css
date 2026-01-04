@@ -15,13 +15,13 @@ a{
     --main-dimension-img: 30.8rem;
     
     /* Main colors */
-    --dark-tone: #9A7757;
-    --medium-tone: #E0CFB5;
-    --light-tone: #E6DAC8;
+    --dark-tone: #BA7530;/*#9A7757;*/
+    --medium-tone: #FFE599;
+    --light-tone: #F8EBAF;
     --lightness-tone: #FFFFFF;
 
     /* Border colors */
-    --dark-border: #9A7757;
+    --dark-border: #BA7530;
     --light-border: #C1C1C1;
 }
 
@@ -99,7 +99,7 @@ section{
     background-position: 14% 76%;
     width: 30.8rem;
     height: 30.8rem;
-    border: 0.8rem solid var(--dark-border);
+    border: 0.4rem solid var(--dark-border);
     border-radius: 50%;
 }
 
@@ -143,9 +143,8 @@ header, footer{
 header{
     position: fixed;
     top: 0;
-    background: linear-gradient(90deg,var(--dark-tone) 0%, var(--medium-tone) 85%);
+    background: linear-gradient(90deg,var(--dark-tone) 0%, var(--light-tone) 85%);
     z-index: 1000;
-    /* filter: saturate(2.2); */
 }    
 
 .logo-header{
@@ -165,7 +164,7 @@ header{
 
 /* Footer section */
 footer{
-    background: linear-gradient(90deg,var(--light-tone) 0%, var(--dark-tone) 100%);
+    background: linear-gradient(90deg,var(--light-tone) 0%, var(--dark-tone) 85%);
 }        
 
 .logo-footer{
@@ -284,7 +283,7 @@ nav ul li:hover{
 .about-us-img{
     width: 26rem;
     height: 26rem;
-    border: 0.8rem solid var(--dark-border);
+    border: 0.3rem solid var(--dark-border);
     border-radius: 50%;
 }
 
@@ -307,7 +306,7 @@ nav ul li:hover{
     width: 30.8rem;
     background-color: var(--light-tone);
     padding: 2rem 1rem 1rem;
-    border: 0.4rem solid var(--lightness-tone);
+    border: 0.3rem solid var(--dark-tone);
     border-radius: 2rem;
     overflow: hidden;
 }
@@ -349,7 +348,7 @@ nav ul li:hover{
 
 .slider-controls{
     display: flex;
-    border: 0.2rem solid var(--dark-border);
+    border: 0.3rem solid var(--dark-border);
     border-radius: 1.8rem;
     width: 11rem;
     height: 3rem;
@@ -381,6 +380,8 @@ nav ul li:hover{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
     height: 29.5rem;
     position: relative;
 }
@@ -388,7 +389,7 @@ nav ul li:hover{
 .feeling-img{
     width: 9.7rem;
     height: 9.7rem;
-    border: 0.4rem solid var(--light-border);
+    border: 0.4rem solid var(--medium-tone);
     border-radius: 50%;
 }
 
@@ -408,7 +409,7 @@ nav ul li:hover{
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    border: 0.4rem solid var(--light-border);
+    border: 0.4rem solid var(--medium-tone);
     border-radius: 50%;
 }
 
@@ -434,6 +435,13 @@ nav ul li:hover{
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
+}
+
+.skills-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .skill-description-container{
@@ -748,13 +756,6 @@ nav ul li:hover{
         height: 28rem;
     }
 
-    .feeling-img{
-        width: 11rem;
-        height: 11rem;
-        border: 0.4rem solid var(--light-border);
-        border-radius: 50%;
-    }
-
     .skill-description-container{
         width: 40rem;;
     }
@@ -872,6 +873,11 @@ nav ul li:hover{
         line-height: 2.5rem;
     }
 
+    .skills-main-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     /* Key-differentiators section */
     .key-differentiators-content{
         max-width: 900px;
@@ -881,10 +887,6 @@ nav ul li:hover{
         grid-template-rows: repeat(3, 1fr);
         height: 40rem;
         position: relative;
-    }
-
-    .feeling-img{
-        display: block;
     }
 
     .key-differentiator{
