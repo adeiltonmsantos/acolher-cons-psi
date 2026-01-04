@@ -58,7 +58,7 @@ body{
 section{
     min-height: 100dvh;
     display: flex;
-    padding-top: calc(var(--header-height) + 3rem);
+    padding-top: calc(var(--header-height) + 1rem);
     padding-bottom: 1rem;
     flex-direction: column;
     justify-content: flex-start;
@@ -225,14 +225,15 @@ nav ul li, .mobile-menu-content ul li{
     list-style: none;
     font-size: 2rem;
     padding: 0.8rem 1.6rem;
-    border-radius: 2.5rem;
+    border-radius: 3rem;
     cursor: pointer;
     border: 0.3rem solid transparent;
     transition: border 0.6s ease-in-out;
+    margin: auto auto;
 }
 
 nav ul li:hover{
-    border: 0.3rem solid #546A85;
+    border: 0.3rem solid var(--lightness-tone);
 }
 
 /* Mobile menu */
@@ -323,6 +324,14 @@ nav ul li:hover{
     align-items: center;
     gap: 2rem;
     min-width: 30.8rem;
+}
+
+.prevBtn, .nextBtn{
+    transition: filter 0.3s ease-in-out;
+}
+
+.prevBtn:hover, .nextBtn:hover{
+    filter: brightness(1.5);
 }
 
 .about-us-professional{
@@ -482,6 +491,10 @@ nav ul li:hover{
 
 .key-differentiator:hover{
     transform: scale(1.1);
+}
+
+.feeling-img{
+    display: none;
 }
 
 
@@ -761,6 +774,25 @@ nav ul li:hover{
 
 /* Desktops and larger screen*/
 @media screen and (min-width: 1280px){
+    .mobile-menu{
+        display: none;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 25rem;
+    }
+
+    nav{
+        display: flex;
+        width: fit-content;
+    }
+    
+    section, #about-us{
+        padding-top: calc(var(--header-height) - 2rem);
+    }
+
     .main-container h1{
         font-size: 3rem;
     }
@@ -769,11 +801,29 @@ nav ul li:hover{
         font-size: 2.7rem;
     }
 
+    header{
+        height: calc(var(--header-height) - 3rem);
+    }
+
     /* Home section */
+    #home{
+        padding-top: calc(var(--header-height) + 2rem);
+    }
+    
     #home .main-container{
         flex-direction: row;
         align-items: center;
         gap: 3rem
+    }
+
+    .home-img{
+        width: 40rem;
+        height: 40rem;
+    }
+
+    .home-content .home-tit-container p,
+    .home-content ul li{
+        font-size: 2.3rem;
     }
 
     /* About-us section */
@@ -787,7 +837,7 @@ nav ul li:hover{
     .slider-container{
         width: 100%;
         min-width: 80rem;
-        height: 32rem;
+        height: 28rem;
     }
 
     .slide{
@@ -795,23 +845,90 @@ nav ul li:hover{
         flex-direction: row;
     }
 
-/* About-us section */
-    #about-us{
-        padding-top: calc(var(--header-height) + 4rem);
+    #about-us .main-container p {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
     }
 
-    #about-us .main-container p {
-        font-size: 2.2rem;
-        line-height: 2.9rem;
+    .about-us-professional{
+        flex-direction: column;
     }
 
     .about-us-img{
-        width: 28rem;
-        height: 28rem;
+        width: 25rem;
+        height: 25rem;
     }
 
     .slide p{
         padding: 1.5rem;
     }
+
+    /* Skills section */
+    .skill-description p{
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+
+    /* Key-differentiators section */
+    .key-differentiators-content{
+        max-width: 900px;
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 40rem;
+        position: relative;
+    }
+
+    .feeling-img{
+        display: block;
+    }
+
+    .key-differentiator{
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+        width: 27rem;
+    }
+
+    .key-differentiator:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .key-differentiator:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .key-differentiator:nth-child(3){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    
+    .services-img{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    #selfcare{
+        width: 20rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    #wellcoming-service{
+        width: 25rem;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+    }
+    
+    
 
 }
