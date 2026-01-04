@@ -145,6 +145,7 @@ header{
     top: 0;
     background: linear-gradient(90deg,var(--dark-tone) 0%, var(--medium-tone) 85%);
     z-index: 1000;
+    /* filter: saturate(2.2); */
 }    
 
 .logo-header{
