@@ -493,7 +493,9 @@ nav ul li:hover{
     transform: scale(1.1);
 }
 
-.services-img{
+.services-img,
+#wellcoming-service,
+#selfcare{
     display: none;
 }
 
@@ -910,12 +912,14 @@ nav ul li:hover{
     }
     
     .services-img{
+        display: block;
         height: 100%;
         width: 100%;
         position: absolute;
     }
     
     #selfcare{
+        display: block;
         width: 20rem;
         position: absolute;
         top: 0;
@@ -923,6 +927,7 @@ nav ul li:hover{
     }
     
     #wellcoming-service{
+        display: block;
         width: 25rem;
         bottom: 0;
         left: 0;
