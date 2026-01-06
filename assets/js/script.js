@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Filling data and urls from data json file
+    fetch('assets/js/data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Logo header
+            const logoHeader = document.querySelector('.logo-header img');
+            logoHeader.setAttribute('src', data['url-logo-header'])
+
+            // Image of Home section
+            const homeImg = document.querySelector('.home-tit-container img');
+            homeImg.setAttribute('src', data['url-img-header']);
+        });
+
+
+
     const mobileMenu = document.querySelector('.mobile-menu-content');
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
     const mobileMenuItems = mobileMenu.querySelectorAll('ul li');

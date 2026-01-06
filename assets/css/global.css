@@ -597,11 +597,6 @@ nav ul li:hover{
         padding: 0 1rem;
     }
 
-    /* .about-us-img{
-        width: 20rem;
-        height: 20rem;
-    } */
-
 }
 
 /* Tablets */
@@ -643,12 +638,6 @@ nav ul li:hover{
     .main-container h2{
         font-size: 2.8rem;
     }
-
-    /* About-us section */
-    /* .about-us-img{
-        width: 33rem;
-        height: 33rem;
-    } */
 
     .slider{
         width: 40rem;
@@ -855,11 +844,6 @@ nav ul li:hover{
     .about-us-professional{
         flex-direction: column;
     }
-
-    /* .about-us-img{
-        width: 25rem;
-        height: 25rem;
-    } */
 
     .slide p{
         padding: 1.5rem;
