@@ -93,7 +93,7 @@ section{
 }
 
 .home-img{
-    background-image: url('../img/professionals.png');
+    background-image: url('../img/respiro-professionals.png');
     background-size: 104%;
     background-repeat: no-repeat;
     background-position: 14% 76%;
@@ -388,20 +388,20 @@ nav ul li:hover{
     position: relative;
 }
 
+.skills-main-container{
+    display: flex;
+    align-items: center;
+}
+
+.skills-main-container .skills-splash{
+    display: none;
+}
+
 .feeling-img{
     width: 9.7rem;
     height: 9.7rem;
     border: 0.4rem solid var(--medium-tone);
     border-radius: 50%;
-}
-
-.professionals-skills-container{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .skills-professionals-img{
@@ -415,63 +415,83 @@ nav ul li:hover{
     border-radius: 50%;
 }
 
-.skills-grid-img .feeling-img:nth-child(1){
+.skills-splash-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-splash{
+    width: 28.9rem;
+    height: 28rem;
+    filter: opacity(0.65);
+}
+
+.skills-grid-img :nth-child(1){
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.skills-grid-img .feeling-img:nth-child(2){
+.skills-grid-img :nth-child(2){
     grid-column-start: 3;
     grid-column-end: 4;
 }
 
-.skills-grid-img .feeling-img:nth-child(3){
+.skills-grid-img :nth-child(3){
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
-.skills-grid-img .feeling-img:nth-child(4){
+.skills-grid-img :nth-child(4){
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
-.skills-main-container{
+.professionals-skills-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .skills-main-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-}
+} */
 
-.skill-description-container{
+/* .skills-grid-img .skills-splash{
+    width: 28.9rem;
+    height: 28rem;
+} */
+
+/* .skill-description-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    width: 30.4rem;
-    height: 22.3rem;
-    padding: 2.5rem 1.8rem;
-    background-image: url('../img/note-page.png');
+    width: 28.9rem;
+    height: 28rem;
+    padding: 0 1.5rem;
+    background-image: url('../img/cloud.png');
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-/* .skill-description-container h2{
-    font-size: 2.2rem;
-    line-height: 2.2rem;
+.skill-description-container img{
+    width: 28.9rem;
+    height: 28rem;
+    filter: opacity(0.65);
 } */
-
-.skill-description-container p{
-    font-size: 1.6rem;
-    line-height: 2rem;
-    text-align: justify;
-    max-height: 16rem;
-    width: 100%;
-}
 
 /* Key Differentiators section */
 #key-differentiators .main-container{
@@ -667,6 +687,12 @@ nav ul li:hover{
         line-height: 2.5rem;
     }
 
+    /* Skills */
+    .skills-splash-container{
+        flex-direction: row;
+        column-gap: 2rem;
+    }
+
 }
 
 /* Larger tablets */
@@ -752,10 +778,63 @@ nav ul li:hover{
         width: 40rem;;
     }
 
-    .skill-description p{
-        font-size: 2rem;
+    /* Key-differentiators section */
+    .key-differentiators-content{
+        max-width: 80rem;
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 40rem;
+        position: relative;
+    }
+
+    .key-differentiator{
+        font-size: 1.7rem;
         line-height: 2.2rem;
-        text-align: justify;
+        width: 27rem;
+    }
+
+    .key-differentiator:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .key-differentiator:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .key-differentiator:nth-child(3){
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    
+    .services-img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    #selfcare{
+        display: block;
+        width: 20rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    #wellcoming-service{
+        display: block;
+        width: 25rem;
+        bottom: 0;
+        left: 0;
+        position: absolute;
     }
 
     /* Contact section */
@@ -854,17 +933,15 @@ nav ul li:hover{
     }
 
     /* Skills section */
-    .skill-description p{
-        font-size: 1.7rem;
-        line-height: 2.5rem;
+    .skills-splash-container{
+        display: none;
     }
 
-    .skills-main-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .skills-main-container .skills-splash{
+        display: block;
     }
 
-    /* Key-differentiators section */
+    /* Key-differentiators section
     .key-differentiators-content{
         max-width: 900px;
         display: grid;
@@ -921,7 +998,7 @@ nav ul li:hover{
         bottom: 0;
         left: 0;
         position: absolute;
-    }
+    } */
     
     footer{
         height: calc(var(--header-height) - 3rem);
